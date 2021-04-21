@@ -9,13 +9,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ForgotComponent } from './auth/forgot/forgot.component';
 import { MaterialDesign } from './material/material.module';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { ProductDetailComponent } from './auth/product-detail/product-detail.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ForgotComponent
+    ForgotComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -23,6 +27,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     BrowserAnimationsModule,
     MaterialDesign,
     MatSidenavModule,
+    FormsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

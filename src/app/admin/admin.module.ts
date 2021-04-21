@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductComponent } from './product/product.component';
 import { MaterialDesign } from '../material/material.module';
 import { FormsModule } from '@angular/forms';
+import { ProductDetailComponent } from '../auth/product-detail/product-detail.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,7 @@ const routes: Routes = [
     AdminComponent, 
     DashboardComponent, 
     ProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     CommonModule,
