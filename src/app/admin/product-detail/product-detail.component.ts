@@ -40,7 +40,5 @@ export class ProductDetailComponent implements OnInit {
         alert('Tidak dapat memperbarui data');
       });
     }
-    
-   
   }
 }

@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
-import { FileUploaderComponent } from '../admin/file-uploader/file-uploader.component';
 import { MaterialDesign } from '../material/material.module';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule } from '@angular/forms';
-import { ProductDetailComponent } from '../admin/product-detail/product-detail.component';
 import { ProductComponent } from './product/product.component';
-import { GalleryComponent } from './gallery/gallery.component';
 import { ImageUploaderComponent } from './image-uploader/image-uploader.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { FileUploaderComponent } from './file-uploader/file-uploader.component';
+
 
 const routes: Routes = [
   {
@@ -20,7 +21,7 @@ const routes: Routes = [
         path:'dashboard',
         component:DashboardComponent
       },
-      { 
+      {
         path:'product',
         component:ProductComponent
       },
@@ -33,21 +34,22 @@ const routes: Routes = [
   }
 ]
 
-
 @NgModule({
   declarations: [
-     AdminComponent,
-     ProductDetailComponent,
-     FileUploaderComponent,
-     ProductComponent,
-     GalleryComponent,
-     ImageUploaderComponent
-    ],
+    AdminComponent, 
+    DashboardComponent,
+    ProductComponent,
+    ProductDetailComponent,
+    ImageUploaderComponent,
+    GalleryComponent,
+    FileUploaderComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     MaterialDesign,
     FormsModule
   ]
-})
+}
+)
 export class AdminModule { }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ImageUploaderComponent } from '../image-uploader/image-uploader.component';
 
 @Component({
   selector: 'app-gallery',
@@ -11,5 +13,7 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  
 
 }

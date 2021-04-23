@@ -1,8 +1,8 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ProductDetailComponent } from 'src/app/admin/product-detail/product-detail.component';
 import { ApiService } from 'src/app/services/api.service';
 import { FileUploaderComponent } from '../file-uploader/file-uploader.component';
-import { ProductDetailComponent } from '../product-detail/product-detail.component';
 
 @Component({
   selector: 'app-product',
@@ -69,7 +69,7 @@ export class ProductComponent implements OnInit {
         if(conf)
         this.loadingDelete[idx]=true;
         {
-          this.api.delete('bookswithauth/'+id).subscribe(result=>{
+          this.api.delete('books/'+id).subscribe(result=>{
             this.books.splice(idx,1);
             this.loadingDelete[idx]=false;
           },error=>{
@@ -78,6 +78,8 @@ export class ProductComponent implements OnInit {
           });
         }
       }
+
+
       Uploadfile(data: any)
       {
         let dialog= this.dialog.open(FileUploaderComponent  , {
@@ -85,7 +87,7 @@ export class ProductComponent implements OnInit {
           data: data,
       });
         dialog.afterClosed().subscribe(result=> {
-        return;
-        })      
+        });
+        
       }
     }
