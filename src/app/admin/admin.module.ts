@@ -8,6 +8,8 @@ import { MaterialDesign } from '../material/material.module';
 import { FormsModule } from '@angular/forms';
 import { ProductDetailComponent } from '../admin/product-detail/product-detail.component';
 import { ProductComponent } from './product/product.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ImageUploaderComponent } from './image-uploader/image-uploader.component';
 
 const routes: Routes = [
   {
@@ -37,7 +39,9 @@ const routes: Routes = [
      AdminComponent,
      ProductDetailComponent,
      FileUploaderComponent,
-     ProductComponent
+     ProductComponent,
+     GalleryComponent,
+     ImageUploaderComponent
     ],
   imports: [
     CommonModule,
