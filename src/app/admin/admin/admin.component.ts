@@ -35,7 +35,6 @@ export class AdminComponent implements OnInit {
       window.location.reload();
     }
   }
-
   menu=[
     {
       name:'Dashboard',
@@ -53,5 +52,6 @@ export class AdminComponent implements OnInit {
       ]
     }
   ];
+
 
 }

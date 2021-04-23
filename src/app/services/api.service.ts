@@ -1,11 +1,14 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { FileUploaderComponent } from '../admin/file-uploader/file-uploader.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
+  [x: string]: any;
   serverUrl:any='http://api.sunhouse.co.id/bookstore/index.php/';
+  dialog: any;
   constructor(
     public http:HttpClient
   ) { }
@@ -60,4 +63,9 @@ delete(url: any)
  {
    return this.http.post(this.serverUrl+'auth/login',{email:email,password:password});
  }
+ //upload file
+upload(file: any)
+{
+   return this.http.post(this.serverUrl+'upload/book',file);
+}
 }

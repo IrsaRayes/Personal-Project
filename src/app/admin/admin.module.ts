@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductComponent } from './product/product.component';
+import { FileUploaderComponent } from '../admin/file-uploader/file-uploader.component';
 import { MaterialDesign } from '../material/material.module';
 import { FormsModule } from '@angular/forms';
-import { ProductDetailComponent } from '../auth/product-detail/product-detail.component';
+import { ProductDetailComponent } from '../admin/product-detail/product-detail.component';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,7 @@ const routes: Routes = [
         path:'dashboard',
         component:DashboardComponent
       },
-      {
+      { 
         path:'product',
         component:ProductComponent
       },
@@ -26,21 +27,23 @@ const routes: Routes = [
         pathMatch:'full',
         redirectTo:'/admin/dashboard' 
       }
-]
+    ]
   }
 ]
+
+
 @NgModule({
   declarations: [
-    AdminComponent, 
-    DashboardComponent, 
-    ProductComponent,
-    ProductDetailComponent
-  ],
+     AdminComponent,
+     ProductDetailComponent,
+     FileUploaderComponent,
+     ProductComponent
+    ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     MaterialDesign,
-    FormsModule,
+    FormsModule
   ]
 })
 export class AdminModule { }
