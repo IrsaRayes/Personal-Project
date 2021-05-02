@@ -68,4 +68,8 @@ upload(file: any)
 {
    return this.http.post(this.serverUrl+'upload/book',file);
 }
+updateProduct(file:any)
+  {
+    return this.http.post(this.serverUrl+'updateProduct/book',file);
+  }
 }

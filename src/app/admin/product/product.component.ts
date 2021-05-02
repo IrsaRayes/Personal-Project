@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import * as FileSaver from 'file-saver';
 import { ProductDetailComponent } from 'src/app/admin/product-detail/product-detail.component';
 import { ApiService } from 'src/app/services/api.service';
 import { FileUploaderComponent } from '../file-uploader/file-uploader.component';
@@ -69,7 +70,7 @@ export class ProductComponent implements OnInit {
         if(conf)
         this.loadingDelete[idx]=true;
         {
-          this.api.delete('books/'+id).subscribe(result=>{
+          this.api.delete('bookswithauth/'+id).subscribe(result=>{
             this.books.splice(idx,1);
             this.loadingDelete[idx]=false;
           },error=>{
@@ -84,10 +85,16 @@ export class ProductComponent implements OnInit {
       {
         let dialog= this.dialog.open(FileUploaderComponent  , {
           width: '500px',
-          data: data,
+          data: data
       });
         dialog.afterClosed().subscribe(result=> {
-        });
-        
+        return;
+        })      
       }
+      downloadFile(data:any)
+      {
+        FileSaver.saveAs('http://api.sunhouse.co.id/bookstore/'+data.url);
+        //FileSaver.saveAs('');
+      }
+    
     }

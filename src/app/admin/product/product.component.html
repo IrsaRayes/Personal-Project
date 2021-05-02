@@ -26,7 +26,7 @@
             <tbody>
                 <tr *ngFor="let book of books; let idx=index">
                     <td>
-                        <button mat-icon-button *ngIf="book.url != ''">
+                        <button mat-icon-button (click)="downloadFile(book)" *ngIf="book.url != '' ">
                             <mat-icon>download</mat-icon>
                         </button>
                     </td>
