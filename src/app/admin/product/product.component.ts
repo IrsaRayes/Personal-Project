@@ -25,8 +25,8 @@ export class ProductComponent implements OnInit {
     this.title='Product';
     this.book={
       title:'angular pertama',
-      author:'afnanda',
-      publisher:'ada aja',
+      author:'Irsa',
+      publisher:'Haru',
       year:2020,
       isbn:'244242',
       price:3000000
