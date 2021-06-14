@@ -22,7 +22,7 @@ export class ProductComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.title='Product';
+    this.title='Data Mahasiswa';
     this.book={
       title:'angular pertama',
       author:'Irsa',
