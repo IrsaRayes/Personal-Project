@@ -1,0 +1,46 @@
+<div *ngIf="loading" style="height: 300px;" class="uk-flex uk-flex-center uk-flex-middle">
+    <mat-spinner></mat-spinner>
+</div>
+
+<mat-card *ngIf='!loading'>
+    <mat-card-header>
+        <mat-card-title>{{title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class='uk-flex'>
+            <span class="uk-width-expand"></span>
+            <button mat-flat-button color="primary" (click)="StudentDetail({},-1)">Tambah Data</button>
+        </div>
+        <table class="uk-table uk-table-middle uk-table-divider">
+            <thead>
+                <th></th>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Agama</th>
+                <th>Jenis Kelamin</th>
+                <th>Tanggal Lahir</th>
+                <th>NIS</th>
+                <th>No Telp Wali</th>
+                <th align="right"></th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Student of student; let idx=index">
+
+                    <td>{{idx+1}}</td>
+                    <td>{{Student.name}}</td>
+                    <td>{{Student.address}}</td>
+                    <td>{{Student.religion}}</td>
+                    <td>{{Student.gender}}</td>
+                    <td>{{Student.birthday}}</td>
+                    <td>{{Student.NIS}}</td>
+                    <td>{{Student.phone}}</td>
+                    <td align="right">
+                        <button mat-button color="primary" (click)="StudentDetail(Student,idx)">Edit</button>
+                        <button mat-button color="accent" (click)="DeleteStudent(Student.id, idx)"[disabled]="loadingDelete[idx]">{{loadingDelete[idx] ? 'Menghapus..':'Delete'}}</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-card-content>
+</mat-card>

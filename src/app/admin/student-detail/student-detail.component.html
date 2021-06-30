@@ -4,27 +4,31 @@
 <div mat-dialog-content>
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Nama</mat-label>
-        <input matInput [(ngModel)]="data.title">
+        <input matInput [(ngModel)]="data.name">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Alamat</mat-label>
-        <input matInput [(ngModel)]="data.author">
+        <input matInput [(ngModel)]="data.address">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Agama</mat-label>
+        <input matInput [(ngModel)]="data.religion">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Jenis Kelamin</mat-label>
-        <input matInput [(ngModel)]="data.publisher">
+        <input matInput [(ngModel)]="data.gender">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
-        <mat-label>Tahun Lahir</mat-label>
-        <input matInput [(ngModel)]="data.year">
+        <mat-label>Tanggal Lahir</mat-label>
+        <input matInput [(ngModel)]="data.birthday">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
-        <mat-label>NIM</mat-label>
-        <input matInput [(ngModel)]="data.isbn">
+        <mat-label>NIS</mat-label>
+        <input matInput [(ngModel)]="data.NIS">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
-        <mat-label>No Telp</mat-label>
-        <input matInput [(ngModel)]="data.price">
+        <mat-label>No Telp Wali</mat-label>
+        <input matInput [(ngModel)]="data.phone">
     </mat-form-field>
 </div>
 <div mat-dialog-action align="end">

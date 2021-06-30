@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "data-siswa-c5c44": {
+      "hosting": {
+        "myangular": [
+          "data-siswa-c5c44"
+        ]
+      }
+    }
+  }
+}

@@ -25,7 +25,7 @@
       <div *ngFor="let item of menu">
     <div *ngIf="item.children !=undefined">
         <h3 matSubheader >{{item.group}}</h3>
-        <mat-list-item *ngFor="let c of item.children" routerLink="/admin/product">
+        <mat-list-item *ngFor="let c of item.children" routerLink="/admin/student">
             <mat-icon matListIcon>{{c.icon}}</mat-icon>
             <h3 matLine>{{c.name}}</h3>
         </mat-list-item>
