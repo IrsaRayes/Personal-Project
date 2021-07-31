@@ -22,19 +22,14 @@
     [fixedBottomGap]="0">
 
     <mat-nav-list>
-      <div *ngFor="let item of menu">
-    <div *ngIf="item.children !=undefined">
-        <h3 matSubheader >{{item.group}}</h3>
-        <mat-list-item *ngFor="let c of item.children" routerLink="/admin/student">
-            <mat-icon matListIcon>{{c.icon}}</mat-icon>
-            <h3 matLine>{{c.name}}</h3>
-        </mat-list-item>
-      </div>
-      <mat-list-item *ngIf="item.children == undefined" routerLink="/admin/dashboard">
-          <mat-icon matListIcon>{{item.icon}}</mat-icon>
-          <h3 matLine>{{item.name}}</h3>
-      </mat-list-item>       
-      </div>
+      <mat-list-item routerLink="/admin/dashboard">
+      <mat-icon matListIcon>dashboard</mat-icon>
+      <h3 matLine>Dashboard</h3>
+      </mat-list-item>
+      <mat-list-item routerLink="/admin/student">
+      <mat-icon matListIcon>dashboard</mat-icon>
+      <h3 matLine>Data Siswa</h3>
+      </mat-list-item>
     </mat-nav-list>
 
    </mat-sidenav>

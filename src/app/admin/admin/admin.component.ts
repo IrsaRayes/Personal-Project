@@ -27,23 +27,4 @@ export class AdminComponent implements OnInit {
     }
   }
 
-
-  menu=[
-    {
-      name:'Dashboard',
-      icon:'space_dashboard',
-      url:'/admin/dashboard'
-    },
-    {
-      group:'Menu Group',
-      children:[
-        {
-          name:'Data Siswa',
-          icon:'contact_page',
-          url:'/admin/student'
-        }
-      ]
-    }
-  ];
-
 }
